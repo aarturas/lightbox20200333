@@ -1,0 +1,404 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #444;
+  --overaly-color: rgba(0, 0, 0, 0.5);
+}
+
+/* =============================================================  */
+/*   4.                     Pradžia                               */
+/* =============================================================  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================================  */
+/*   5.                     BODY                                  */
+/* =============================================================  */
+
+body {
+  font-family: 'Catamaran', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* =============================================================  */
+/*   6.       H 1, H 2, H 3, H 4 -  eilutės aukštis               */
+/* =============================================================  */
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+}
+
+/* =============================================================  */
+/*   7.     Links spalva ir pašaliname linija apačioje            */
+/* =============================================================  */
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* =============================================================  */
+/*   8. /  UL /    Nesurikiuotas sąrašas -  nepažymėtas bus       */
+/* =============================================================  */
+
+ul {
+  list-style: none;
+}
+
+/* =============================================================  */
+/*   9.                     Nuotraukų plotis:                     */
+/* =============================================================  */
+
+img {
+  width: 100%;
+}
+
+/* =============================================================  */
+/*  10.   /  NAVBAR  /  Konteineriui naudosime max - width        */
+/* =============================================================  */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* =============================================================  */
+/*   11.  / NAVBAR / CONTAINER /    Pradėdime nuo navigacijos     */
+/* =============================================================  */
+
+.navbar {
+  font-size: 1.2rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .nav {
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    a {
+      padding: 0 1rem;
+      &:hover {
+        color: #555;
+      }
+    }
+  }
+}
+
+/* *****************  /  PIRMAS SKYRIUS  /  ********************  */
+
+/* =============================================================  */
+/*   18. SECTION-A  ( showcase ) žiūrėti į : index.html           */
+/* =============================================================  */
+
+.section-a {
+  margin: 2rem 0;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+  }
+  p {
+    margin: 1rem 0;
+  }
+}
+
+/* *****************  /  ANTRAS SKYRIUS  /  ********************  */
+
+/* =============================================================  */
+/*        kadangi CONTAINER, tai bus position RELATIVE            */
+/* =============================================================  */
+/* =============================================================  */
+/*   24.  SECTION - B  /  OVERLAY  / ( antra dalis )              */
+/* =============================================================  */
+
+.section-b {
+  position: relative;
+  background: url('/dist/img/nuotr9.jpg') no-repeat bottom center/cover;
+  height: 600px;
+}
+
+/* =============================================================  */
+/*   25.    SECTION - B /  OVERLAY  /  2-os dalies aprašymas      */
+/* =============================================================  */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--overaly-color);
+}
+
+/* =============================================================  */
+/*   26.  SECTION - B /  OVERLAY  /  Section - b - inner  /       */
+/* =============================================================  */
+
+.section-b-inner {
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  max-width: 860px;
+  padding: 5rem 0;
+  h3 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 5rem;
+    margin-top: 1rem;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+}
+
+/* *****************  /  TREČIAS SKYRIUS  /  *******************  */
+
+/* =============================================================  */
+/*   30.      SECTION - C /  GALLERY  /   Nuotraukos              */
+/* =============================================================  */
+
+.section-c {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    a {
+      &:first-child {
+        grid-row: 1/3;
+        grid-column: 1/3;
+      }
+      &:nth-child(2) {
+        grid-column: 3/5;
+      }
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* *****************  /  FOOTER SKYRIUS  /  ********************  */
+
+/* =============================================================  */
+/*   34.                     FOOTER                               */
+/* =============================================================  */
+
+.section-footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 4rem 0;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    margin-bottom: 0.7rem;
+  }
+  a {
+    line-height: 1.9;
+    color: #fff;
+    > i {
+      color: #555;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+/* =============================================================  */
+/*  45-A. FOOTER  -  SECTION  /  CONTAINER  /  el.pašto button    */
+/* =============================================================  */
+
+.email-form {
+  width: 100%;
+  display: inline-block;
+  background-color: #555;
+  position: relative;
+  border-radius: 20px;
+  line-height: 0;
+  margin-top: 1rem;
+  .form-control {
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    color: #ddd;
+    background-color: transparent;
+    font-family: inherit;
+    margin: 0;
+    padding: 0 3rem 0 1.5rem;
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+  }
+  .submit {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #eee;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: #333;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+  }
+}
+
+/* =============================================================  */
+/*  22.  Utilities arba mygtukas viršuje / A sektorius / tęsinys  */
+/* =============================================================  */
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
+/* *********  /  MEDIA  QUERIES  /  ******* ( 700 px ) *********  */
+
+/* =============================================================  */
+/*   48.    MEDIA QUERIES  -  700 px  ir mažiau...   mobiliam     */
+/* =============================================================  */
+
+@media (max-width: 700px) {
+  .section-a {
+    .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      div {
+        &:first-child {
+          order: 2;
+        }
+        &:last-child {
+          order: -1;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      margin: auto;
+    }
+    h1 {
+      font-size: 3.5rem;
+      padding: 2rem;
+    }
+  }
+  .section-b-inner {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+  .section-c {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+      a {
+        &:first-child {
+          grid-row: 1/1;
+          grid-column: 1/1;
+        }
+        &:nth-child(2) {
+          grid-row: 2/2;
+          grid-column: 2/4;
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+  .section-footer {
+    padding: 2rem 0;
+    .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    div {
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+/* *********  /  MEDIA  QUERIES  /  ******* ( 400 px ) *********  */
+
+/* =============================================================  */
+/*   9.  MEDIA - QUERIES  /  4OO PX  /  Bandau italpinti img      */
+/* =============================================================  */
+
+@media (max-width: 400px) {
+  .section-c {
+    .gallery {
+      img {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  .section-b-inner h2 {
+    display: none;
+  }
+
+  .section-footer h2 {
+    display: none;
+  }
+
+  .section-b h3 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+// ==============================================
