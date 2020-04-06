@@ -107,7 +107,7 @@ img {
 /* =============================================================  */
 .section-b {
   position: relative;
-  background: url("/dist/img/nuotr9.jpg") no-repeat bottom center/cover;
+  background: url("img/nuotr9.jpg") no-repeat bottom center/cover;
   height: 600px; }
 
 /* =============================================================  */
